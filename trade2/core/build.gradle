@@ -1,0 +1,121 @@
+apply plugin: 'java'
+
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "junit:junit:4.11"
+    testCompile "org.springframework:spring-test:$springVersion"
+    compile fileTree(dir:'lib',include:"*.jar")
+    compile "mysql:mysql-connector-java:$mysqlVersion"
+    compile "javax.servlet:javax.servlet-api:$servletVersion"
+    compile "org.springframework:spring-core:$springVersion"
+    compile "org.springframework:spring-aop:$springVersion"
+    compile "org.springframework:spring-aspects:$springVersion"
+    compile "org.springframework:spring-beans:$springVersion"
+    compile "org.springframework:spring-context:$springVersion"
+    compile "org.springframework:spring-context-support:$springVersion"
+    compile "org.springframework:spring-jdbc:$springVersion"
+    compile "org.springframework:spring-orm:$springVersion"
+    compile "org.springframework:spring-oxm:$springVersion"
+    compile "org.springframework:spring-jms:$springVersion"
+    compile "org.springframework:spring-expression:$springVersion"
+    compile "org.springframework:spring-instrument:$springVersion"
+    compile "org.springframework:spring-web:$springVersion"
+    compile "org.springframework:spring-webmvc:$springVersion"
+    compile "org.springframework:spring-tx:$springVersion"
+    compile ("org.springframework.data:spring-data-mongodb:$springMongoVersion") {
+        transitive = true
+        exclude group: "org.springframework"
+    }
+    compile ("org.springframework.data:spring-data-redis:$springRedisVersion") {
+        transitive = true
+        exclude group: "org.springframework"
+    }
+    compile ("org.springframework.amqp:spring-rabbit:$springRabbitVersion") {
+        transitive = true
+        exclude group: "org.springframework"
+    }
+
+    compile "net.sf.json-lib:json-lib:2.4:jdk15@jar"
+
+    compile "javax.mail:mail:1.4.7"
+    compile "javax.transaction:jta:1.1"
+    compile "javax.servlet:jstl:1.2"
+    compileOnly "org.apache.shiro:shiro-spring:1.2.4"
+    compile "org.apache.ws.commons.axiom:axiom-impl:1.2.8"
+//    compile "org.apache.axis2:axis2-adb:$axis2Version"
+//    compile "org.apache.axis2:axis2-kernel:$axis2Version"
+//    compile "org.apache.axis2:axis2-transport-http:$axis2Version"
+    compile "proxool:proxool:0.8.3"
+    compile "cglib:cglib:2.2.2"
+    compile "cglib:cglib-nodep:2.2.2"
+    compile "com.google.guava:guava:19.0"
+    compile "org.quartz-scheduler:quartz:2.2.3"
+    compileOnly "org.apache.poi:poi:$poiVersion"
+    compileOnly "org.apache.poi:poi-ooxml:$poiVersion"
+    compileOnly "org.apache.poi:poi-ooxml-schemas:$poiVersion"
+    compile "com.google.code.gson:gson:2.6.2"
+    compile ("cn.jpush.api:jpush-client:3.1.3") {
+        transitive = true
+        exclude group: "org.slf4j"
+    }
+    compile "net.gplatform:Sdk4J:2.0"
+
+    compile "commons-lang:commons-lang:2.6"
+    compile "org.apache.commons:commons-lang3:3.4"
+    compile "commons-fileupload:commons-fileupload:1.3.1"
+    compile "commons-pool:commons-pool:1.6"
+    compile "commons-logging:commons-logging:1.2"
+    compile "commons-httpclient:commons-httpclient:3.1"
+    compile "commons-beanutils:commons-beanutils:1.9.2"
+    compile "commons-configuration:commons-configuration:1.10"
+    compile "dom4j:dom4j:1.6.1"
+    compile "net.sf.ezmorph:ezmorph:1.0.6"
+    compile "org.apache.httpcomponents:httpcore:4.4.4"
+    compile "org.javassist:javassist:3.20.0-GA"
+//    compile "asm:asm:3.3.1"
+    compile 'org.ow2.asm:asm:5.0.1'
+    compile "log4j:log4j:1.2.17"
+//    compile "org.slf4j:slf4j-log4j12:1.7.21"
+
+//    compile 'jboss:jboss-cache:1.4.1.GA'
+//    compile 'com.squareup.okhttp3:mockwebserver:3.3.0'
+//    compile 'swarmcache:swarmcache:1.0RC2'
+//    compile "org.ehcache:ehcache:3.0.1"
+
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile "org.codehaus.jackson:jackson-core-asl:$codehasusVersion"
+    compile "org.codehaus.jackson:jackson-mapper-asl:$codehasusVersion"
+
+    compile "aopalliance:aopalliance:$aopallianceVersion"
+    compile "org.hibernate:hibernate-ehcache:$hibernateVersion"
+    compile "org.hibernate:hibernate-core:$hibernateVersion"
+    compile "org.aspectj:aspectjrt:$aspectjVersion"
+    compile "org.aspectj:aspectjweaver:$aspectjVersion"
+    compile "redis.clients:jedis:$jedisVersion"
+    compile "com.alibaba:fastjson:$fastjsonVersion"
+    compile "com.alibaba:druid:$druidVersion"
+    compileOnly "com.aliyun.openservices:ons-client:$onsVersion"
+    compileOnly "com.aliyun.oss:aliyun-sdk-oss:$ossVersion"
+    compile "org.slf4j:slf4j-log4j12:1.7.21"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+def env = System.getProperty("env") ?: "dev"
+
+def res = env == "dev" ? "resources" : "profile/$env";
+
+sourceSets {
+    test {
+        resources {
+            srcDirs = ["src/main/resources", "../config/src/main/resources", "../config/src/main/$res"]
+        }
+    }
+}

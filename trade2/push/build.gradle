@@ -1,0 +1,44 @@
+group 'com.trade'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "main.Application"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "junit:junit:4.11"
+    compile project(":core")
+    testCompile "org.springframework:spring-test:$springVersion"
+    compile "com.corundumstudio.socketio:netty-socketio:1.7.12"
+    compile "org.slf4j:slf4j-log4j12:1.7.21"
+    compile "redis.clients:jedis:$jedisVersion"
+    compile "com.alibaba:fastjson:$fastjsonVersion"
+    compile "org.apache.httpcomponents:httpclient:4.4.1"
+    compile "org.springframework:spring-context:$springVersion"
+}
+
+
+
+def env = System.getProperty("env") ?: "dev"
+
+def res = env == "dev" ? "resources" : "profile/$env";
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/resources", "src/main/$res", "../config/src/main/resources", "../Config/src/main/$res"]
+        }
+    }
+}
+
+println "package $env version";
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

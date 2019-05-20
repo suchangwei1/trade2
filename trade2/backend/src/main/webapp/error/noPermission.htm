@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>没有权限访问</title>
+<style>
+	a{text-decoration:none;font-size:12px;color:#333;}
+	body{background:#ccc;}
+	.no_permission_wrapper{width:400px;height:300px;position:fixed;top:50%;left:50%;margin-left:-200px;margin-top:-150px;}
+	.no_permission_wrapper .lock_img{width:143px;height:149px;margin:20px auto;}
+	.no_permission_wrapper p{text-align:center;height:50px;line-height:50px;font-size:18px;font-weight:bold;color:#333;}
+	.no_permission_wrapper .back_to_index{border:1px solid #333;padding:10px 15px;border-radius:3px;display:table;margin:0 auto;}
+</style>
+</head>
+<body>
+<div class="no_permission_wrapper">
+	<div class="lock_img">
+		<img alt="" src="/static/ssadmin/img/lock.png" height="149" width="143">
+	</div>
+	<p>抱歉，当前您没有访问权限，请联系管理员</p>
+	<a class="back_to_index" href="/">返回首页</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+}
+
+def env = System.getProperty("env") ?: "dev"
+
+def res = env == "dev" ? "resources" : "profile/$env";
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/resources", "src/main/$res"]
+        }
+    }
+}
+
+println "package $env version";

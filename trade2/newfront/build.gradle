@@ -1,0 +1,47 @@
+
+apply plugin: 'java'
+//apply plugin: 'war'
+apply plugin: 'application'
+
+mainClassName = "main.NewFrontendAppServer"
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "junit:junit:4.11"
+    testCompile "org.springframework:spring-test:$springVersion"
+    compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+    compile project(":core")
+    compile "org.hibernate:hibernate-ehcache:$hibernateVersion"
+    compile "org.hibernate:hibernate-core:$hibernateVersion"
+    compile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
+    compile "org.eclipse.jetty:apache-jsp:$jettyVersion"
+    compile "org.eclipse.jetty:apache-jstl:$jettyVersion"
+    compile "org.eclipse.jetty:jetty-nosql:$jettyVersion"
+    compile "org.eclipse.jetty:jetty-annotations:$jettyVersion"
+    compile 'org.springframework.session:spring-session:1.2.0.RELEASE'
+    compile "com.aliyun.oss:aliyun-sdk-oss:$ossVersion"
+}
+
+def env = System.getProperty("env") ?: "dev"
+
+def res = env == "dev" ? "resources" : "profile/$env";
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/resources", "../config/src/main/resources", "../config/src/main/$res"]
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+//war {
+//    exclude '**/static'
+//}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <task:scheduler id="scheduler" pool-size="5"/>
+    <task:scheduled-tasks scheduler="scheduler">
+
+        <!-- 每30秒同步一次系统常量 -->
+        <task:scheduled ref="constantMap" method="init" cron="*/30 * * * * ?"/>
+        <!--刷新排行榜-->
+        <task:scheduled ref="realTimeDealDataService" method="run" fixed-delay="1000"/>
+        <!--&lt;!&ndash;刷新深度挂单数据&ndash;&gt;-->
+        <!--<task:scheduled ref="realTimeEntrustDepthService" method="run" fixed-delay="200"/>-->
+        <!--&lt;!&ndash;刷新最新成交价数据&ndash;&gt;-->
+        <!--<task:scheduled ref="realTimePriceService" method="run" fixed-delay="200"/>-->
+        <!--&lt;!&ndash;刷新成交记录数据&ndash;&gt;-->
+        <!--<task:scheduled ref="realTimeEntrustService" method="run" fixed-delay="200"/>-->
+        <!-- 刷新转账系统列表 1小时 -->
+        <!--<task:scheduled ref="walletTransferService" method="syncApplication" initial-delay="10000" fixed-delay="60000"/>-->
+        <!-- 刷新可转移币类型 -->
+        <!--<task:scheduled ref="walletTransferService" method="syncTransferCoin" initial-delay="1000" fixed-delay="10000"/>-->
+        <!-- 10s获取eth价格 -->
+        <!--<task:scheduled ref="constantMap" method="syncEthPrice" cron="*/10 * * * * ?"/>-->
+        <task:scheduled ref="operateUserActionListener" method="clean" fixed-delay="900000"/>
+    </task:scheduled-tasks>
+
+</beans>

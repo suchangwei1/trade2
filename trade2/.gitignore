@@ -1,0 +1,14 @@
+.settings/
+.gradle/
+.idea/
+.project
+.classpath
+/out/
+/bin/
+/build/
+*.log
+/logs/
+*.iml
+backend/build/
+core/build/
+newfront/build/

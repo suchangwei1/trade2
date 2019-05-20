@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.trade.push"/>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="classpath*:config.properties"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+    </bean>
+
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${redis.maxTotal}" />
+        <property name="maxIdle" value="${redis.maxIdle}" />
+        <property name="minIdle" value="${redis.minIdle}" />
+        <property name="maxWaitMillis" value="${redis.maxWaitMillis}"/>
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"/>
+    </bean>
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="host" value="${redis.host}"/>
+        <constructor-arg name="port" value="${redis.port}"/>
+        <constructor-arg name="password" value="${redis.password}"/>
+        <constructor-arg name="poolConfig" ref="poolConfig"/>
+        <constructor-arg name="timeout" value="${redis.timeout}"/>
+        <!--<constructor-arg name="database" value="${redis.database}"/>-->
+    </bean>
+
+    <bean id="socketIoConfig" class="com.corundumstudio.socketio.Configuration">
+        <property name="hostname" value="${socketio.hostname}"/>
+        <property name="port" value="${socketio.port}"/>
+    </bean>
+
+    <bean class="com.corundumstudio.socketio.SocketIOServer">
+        <constructor-arg name="configuration" ref="socketIoConfig"/>
+    </bean>
+
+    <!--bean 定义-->
+
+    <bean class="com.trade.push.core.PushServer" p:siteUrl="${site.url}" p:delay="${push.delay}"/>
+    <bean class="com.trade.push.core.SessionManager"/>
+    <bean class="com.trade.push.core.MessageCenter"/>
+    <bean class="com.trade.push.data.RealDataServiceImpl"/>
+    <bean class="java.util.concurrent.Executors" factory-method="newCachedThreadPool"/>
+    <bean class="com.trade.push.mq.RedisMessageQueueServiceImpl"/>
+
+</beans>

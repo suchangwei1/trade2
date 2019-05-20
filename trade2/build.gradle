@@ -1,0 +1,48 @@
+group 'com.trade'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+ext {
+    springVersion = "4.2.6.RELEASE"
+    mysqlVersion = "5.1.38"
+    servletVersion = "3.1.0"
+    springMongoVersion = "1.9.1.RELEASE"
+    springRabbitVersion = "1.5.6.RELEASE"
+    springRedisVersion = "1.7.1.RELEASE"
+    jedisVersion = "2.8.1"
+    fastjsonVersion = "1.2.8"
+    druidVersion = "1.0.19"
+    onsVersion = "1.2.1"
+    ossVersion = "2.2.3"
+    poiVersion = "3.6"
+    axis2Version = "1.5"
+    codehasusVersion = "1.9.13"
+    jacksonVersion = "2.7.4"
+    hibernateVersion = "3.6.9.Final"
+    aspectjVersion = "1.8.9"
+    aopallianceVersion = "1.0"
+    jettyVersion = "9.3.10.v20160621"
+
+}
+
+
+//sourceCompatibility = 1.7
+//targetCompatibility = 1.7
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile "com.corundumstudio.socketio:netty-socketio:1.7.12"
+}
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

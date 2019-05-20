@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="classpath*:config.properties"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+    </bean>
+
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${redis.maxTotal}" />
+        <property name="maxIdle" value="${redis.maxIdle}" />
+        <property name="minIdle" value="${redis.minIdle}" />
+        <property name="maxWaitMillis" value="${redis.maxWaitMillis}"/>
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"/>
+    </bean>
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="host" value="${redis.host}"/>
+        <constructor-arg name="port" value="${redis.port}"/>
+        <constructor-arg name="password" value="${redis.password}"/>
+        <constructor-arg name="poolConfig" ref="poolConfig"/>
+        <constructor-arg name="timeout" value="${redis.timeout}"/>
+        <!--<constructor-arg name="database" value="${redis.database}"/>-->
+    </bean>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!-- 基本属性 url、user、password -->
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${jdbc.initialPoolSize}" />
+        <property name="minIdle" value="${jdbc.minPoolSize}" />
+        <property name="maxActive" value="${jdbc.maxPoolSize}" />
+
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="60000" />
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+
+        <property name="validationQuery" value="SELECT 'x'" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+
+        <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+        <property name="poolPreparedStatements" value="true" />
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+
+        <!-- 配置监控统计拦截的filters -->
+        <!--<property name="filters" value="stat" />-->
+    </bean>
+
+     <!--core beans-->
+
+    <bean class="com.trade.deal.util.ObjectMapper"/>
+    <bean class="com.trade.deal.market.impl.MemoryDepthEntrustServiceImpl"/>
+    <bean class="java.util.concurrent.Executors" factory-method="newCachedThreadPool"/>
+    <bean class="com.trade.deal.market.impl.DepthCalculateQueueImpl"/>
+    <bean class="com.trade.deal.data.JdbcTemplate"/>
+    <bean class="com.trade.deal.mq.RabbatMessageQueueServiceImpl"/>
+    <bean class="com.trade.deal.market.impl.CacheDataServiceImpl"/>
+    <bean class="com.trade.deal.core.impl.MatchingEngineImpl"/>
+    <bean class="com.trade.deal.listener.DealMarkingListenerImpl"/>
+    <bean class="com.trade.deal.core.TradingSystem"/>
+    <bean class="com.trade.deal.listener.EntrustListenerImpl"/>
+    <bean class="com.trade.deal.core.MessageCenter" depends-on="initializer"/>
+    <!--<bean class="com.trade.deal.market.impl.MarkServiceImpl"/>-->
+    <bean class="com.trade.deal.core.impl.SyncTaskServiceImpl"/>
+    <bean class="com.trade.deal.core.impl.TradeServiceImpl"/>
+    <!--<bean class="com.trade.deal.task.AutoDealingOneDayData"/>-->
+    <bean class="com.trade.deal.core.MarketUpdater"/>
+
+    <!-- init script -->
+
+    <bean id="initializer" class="com.trade.deal.task.AppInitializer"/>
+
+    <!-- jetty -->
+
+    <!--<bean id="server" class="org.eclipse.jetty.server.Server">-->
+        <!--<property name="connectors">-->
+            <!--<array>-->
+                <!--<bean id="connector" class="org.eclipse.jetty.server.ServerConnector">-->
+                    <!--<constructor-arg index="0" ref="server"/>-->
+                    <!--<property name="port" value="${jetty.port}"/>-->
+                <!--</bean>-->
+            <!--</array>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="servletContext" class="org.eclipse.jetty.servlet.ServletContextHandler">-->
+        <!--<property name="contextPath" value="/"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="handlers" class="org.eclipse.jetty.server.handler.HandlerCollection">-->
+        <!--<property name="handlers">-->
+            <!--<array>-->
+                <!--<ref bean="servletContext"/>-->
+                <!--<bean class="org.eclipse.jetty.server.handler.DefaultHandler"/>-->
+            <!--</array>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash; jmx &ndash;&gt;-->
+
+    <!--<bean id="messageCenterStat" class="com.trade.deal.stat.MessageCenterStat"/>-->
+    <!--<bean id="syncTaskServiceStat" class="com.trade.deal.stat.SyncTaskServiceStat"/>-->
+
+    <!--<bean class="org.springframework.jmx.export.MBeanExporter">-->
+        <!--<property name="beans">-->
+            <!--<map>-->
+                <!--<entry key="com.trade.deal:name=messageCenterStat" value-ref="messageCenterStat"/>-->
+                <!--<entry key="com.trade.deal:name=syncTaskServiceStat" value-ref="syncTaskServiceStat"/>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+</beans>

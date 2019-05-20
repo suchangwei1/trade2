@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="classpath*:oss.properties"/>
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+
+	<context:annotation-config />
+
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/api/**/account/**"/>
+			<mvc:mapping path="/api/**/push_chat_message/**"/>
+			<bean class="com.trade.interceptor.UserLoginInterceptor"/>
+		</mvc:interceptor>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/api/**/account/**"/>
+			<mvc:exclude-mapping path="/api/**/account/profile"/>
+			<mvc:exclude-mapping path="/api/**/account/updateNickname"/>
+			<mvc:exclude-mapping path="/api/**/account/auth"/>
+			<mvc:exclude-mapping path="/api/**/account/upload_auth_img"/>
+			<mvc:exclude-mapping path="/api/**/account/uploadIdentifyPic"/>
+			<mvc:exclude-mapping path="/api/**/account/modTradePassword"/>
+			<mvc:exclude-mapping path="/api/**/account/modLoginPassword"/>
+
+			<bean class="com.trade.interceptor.UserSecurityInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+    <context:component-scan base-package="com.trade.controller" />
+
+	<!--&lt;!&ndash;<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/pages/" p:suffix=".jsp">&ndash;&gt;-->
+	<!--&lt;!&ndash;</bean>&ndash;&gt;-->
+
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+			<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<!--解决 HttpMediaTypeNotAcceptableException: Could not find acceptable representation -->
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<mvc:default-servlet-handler default-servlet-name="trade"/>
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	   <property name="maxUploadSize">
+	   <value>204800000</value>
+	      </property>
+	</bean>
+</beans>

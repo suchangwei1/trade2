@@ -1,0 +1,12 @@
+rootProject.name = 'trade'
+include 'backend'
+include 'core'
+include 'task'
+include 'config'
+include 'newfront'
+include 'api'
+include 'kline-job'
+include 'sms-email-job'
+include 'deal'
+include 'push'
+

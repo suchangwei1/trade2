@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+             http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+             http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <import resource="classpath*:applicationContext-rabbitmq.xml"/>
+    <import resource="classpath*:applicationContext-redis.xml"/>
+    <import resource="classpath*:applicationContext-dataSource.xml"/>
+    <import resource="classpath*:applicationContext-hibernate.xml"/>
+    <import resource="classpath*:applicationContext-tx.xml"/>
+    <import resource="classpath*:applicationContext-cache.xml"/>
+    <import resource="classpath*:applicationContext-task.xml"/>
+
+    <bean id="constantMap" class="com.trade.comm.ConstantMap" scope="singleton" init-method="init"></bean>
+    <!-- 实时数据 -->
+    <bean class="com.trade.auto.RealTimeData" scope="singleton" init-method="init"></bean>
+    <!-- 交易量 -->
+    <bean class="com.trade.auto.OneDayData" scope="singleton"></bean>
+    <!-- k线图数据 -->
+    <!--<bean class="com.trade.auto.KlinePeriodData" scope="singleton" init-method="init"></bean>-->
+
+    <util:map id="config">
+    </util:map>
+
+    <context:annotation-config/>
+
+    <context:component-scan base-package="com.trade.service"/>
+    <context:component-scan base-package="com.trade.dao"/>
+    <context:component-scan base-package="com.trade.cache"/>
+
+    <context:component-scan base-package="com.trade.service.front"/>
+
+    <context:component-scan base-package="com.trade.auto"/>
+    <context:component-scan base-package="com.trade.mq"/>
+
+    <bean class="com.trade.util.SpringContextUtils"/>
+
+    <bean class="java.util.concurrent.Executors" factory-method="newCachedThreadPool"/>
+
+    <mvc:annotation-driven/>
+
+    <!-- log日志队列 -->
+    <bean class="com.trade.queue.ApiInvokeLogQueue" />
+
+</beans>

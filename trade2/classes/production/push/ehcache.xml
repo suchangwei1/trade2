@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+    <defaultCache maxElementsInMemory="10000"
+        eternal="false"
+        overflowToDisk="true"
+        timeToIdleSeconds="180"
+        timeToLiveSeconds="180"
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds= "120"/>
+
+    <!--方法级别数据缓存1分钟-->
+    <cache name="common"
+           maxElementsInMemory="10000"
+           timeToIdleSeconds="60"
+           timeToLiveSeconds="60"
+           diskPersistent="false"
+    />
+
+</ehcache>

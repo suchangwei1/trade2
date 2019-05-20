@@ -1,0 +1,45 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile project(":core")
+    testCompile "junit:junit:4.11"
+    compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+    compile "org.hibernate:hibernate-ehcache:$hibernateVersion"
+    compile "org.hibernate:hibernate-core:$hibernateVersion"
+    testCompile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
+    testCompile "org.eclipse.jetty:apache-jsp:$jettyVersion"
+    testCompile "org.eclipse.jetty:apache-jstl:$jettyVersion"
+    testCompile "org.eclipse.jetty:jetty-annotations:$jettyVersion"
+    // 下面的jar后台才会用到
+    compile "org.apache.shiro:shiro-spring:1.2.4"
+    compile "org.apache.poi:poi:$poiVersion"
+    compile "org.apache.poi:poi-ooxml:$poiVersion"
+    compile "org.apache.poi:poi-ooxml-schemas:$poiVersion"
+    compile "com.aliyun.oss:aliyun-sdk-oss:$ossVersion"
+}
+
+def env = System.getProperty("env") ?: "dev"
+
+def res = env == "dev" ? "resources" : "profile/$env";
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/resources", "../config/src/main/resources", "../config/src/main/$res"]
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+war {
+    archiveName 'ROOT.war'
+}

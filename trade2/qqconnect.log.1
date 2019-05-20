@@ -1,0 +1,815 @@
+1    DEBUG [2019-05-09 21:51:18]  Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
+17   INFO  [2019-05-09 21:51:18]  Logging initialized @6684ms
+53   DEBUG [2019-05-09 21:51:18]  Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@71f2a7d5
+71   DEBUG [2019-05-09 21:51:18]  o.e.j.s.ServletContextHandler@6ea6d14e{/,null,null} added {org.eclipse.jetty.servlet.ServletHandler@6ad5c04e,MANAGED}
+85   DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.server.Server@47f37ef1 added {qtp627185331{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+121  DEBUG [2019-05-09 21:51:18]  HttpConnectionFactory@340f438e[HTTP/1.1] added {HttpConfiguration@30c7da1e{32768/8192,8192/8192,https://:0,[]},POJO}
+134  DEBUG [2019-05-09 21:51:18]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@47f37ef1,UNMANAGED}
+135  DEBUG [2019-05-09 21:51:18]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {qtp627185331{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+135  DEBUG [2019-05-09 21:51:18]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639,AUTO}
+136  DEBUG [2019-05-09 21:51:18]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@67b64c45,POJO}
+139  DEBUG [2019-05-09 21:51:18]  ServerConnector@3796751b{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@340f438e[HTTP/1.1],AUTO}
+140  DEBUG [2019-05-09 21:51:18]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@340f438e[HTTP/1.1]
+145  DEBUG [2019-05-09 21:51:18]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa,MANAGED}
+146  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.server.Server@47f37ef1 added {ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888},AUTO}
+155  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.server.Server@47f37ef1 added {org.eclipse.jetty.server.session.HashSessionIdManager@3498ed,AUTO}
+165  DEBUG [2019-05-09 21:51:18]  Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@380fb434
+165  DEBUG [2019-05-09 21:51:18]  o.e.j.s.ServletContextHandler@668bc3d5{/,null,null} added {org.eclipse.jetty.servlet.ServletHandler@3cda1055,MANAGED}
+472  DEBUG [2019-05-09 21:51:18]  Adding [servletConfigInitParams] PropertySource with lowest search precedence
+472  DEBUG [2019-05-09 21:51:18]  Adding [servletContextInitParams] PropertySource with lowest search precedence
+488  DEBUG [2019-05-09 21:51:18]  InitialContextFactory.getInitialContext()
+497  DEBUG [2019-05-09 21:51:18]  supportDeepBinding=false
+498  DEBUG [2019-05-09 21:51:18]  Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@15d0c81b
+502  DEBUG [2019-05-09 21:51:18]  Adding [jndiProperties] PropertySource with lowest search precedence
+503  DEBUG [2019-05-09 21:51:18]  Adding [systemProperties] PropertySource with lowest search precedence
+506  DEBUG [2019-05-09 21:51:18]  Adding [systemEnvironment] PropertySource with lowest search precedence
+506  DEBUG [2019-05-09 21:51:18]  Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+535  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false,AUTO}
+537  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/static]=>trade,POJO}
+542  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false,AUTO}
+543  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/api/v1/servlet/ImageCode]=>ImageCode,POJO}
+555  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false,AUTO}
+555  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/druid/*]=>druid,POJO}
+588  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true,AUTO}
+588  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]=>mvc,POJO}
+603  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {com.alibaba.druid.support.http.WebStatFilter-8646db9,AUTO}
+608  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9,POJO}
+612  DEBUG [2019-05-09 21:51:18]  Adding [servletConfigInitParams] PropertySource with lowest search precedence
+614  DEBUG [2019-05-09 21:51:18]  Adding [servletContextInitParams] PropertySource with lowest search precedence
+614  DEBUG [2019-05-09 21:51:18]  InitialContextFactory.getInitialContext()
+614  DEBUG [2019-05-09 21:51:18]  Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@569cfc36
+614  DEBUG [2019-05-09 21:51:18]  Adding [jndiProperties] PropertySource with lowest search precedence
+615  DEBUG [2019-05-09 21:51:18]  Adding [systemProperties] PropertySource with lowest search precedence
+615  DEBUG [2019-05-09 21:51:18]  Adding [systemEnvironment] PropertySource with lowest search precedence
+615  DEBUG [2019-05-09 21:51:18]  Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+616  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {org.springframework.web.filter.DelegatingFilterProxy-43bd930a,AUTO}
+616  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a,POJO}
+617  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {com.trade.filter.ForceOfflineFilter-33723e30,AUTO}
+618  DEBUG [2019-05-09 21:51:18]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30,POJO}
+811  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.session.SessionHandler@3d0f8e03 added {org.eclipse.jetty.server.session.HashSessionManager@6366ebe0,AUTO}
+811  DEBUG [2019-05-09 21:51:19]  o.e.j.s.ServletContextHandler@668bc3d5{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@3d0f8e03,MANAGED}
+812  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.session.SessionHandler@3d0f8e03 added {org.eclipse.jetty.servlet.ServletHandler@3cda1055,MANAGED}
+812  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}] added {o.e.j.s.ServletContextHandler@668bc3d5{/,null,null},AUTO}
+813  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.Server@47f37ef1 added {org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}],MANAGED}
+813  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.Server@47f37ef1
+816  INFO  [2019-05-09 21:51:19]  jetty-9.3.10.v20160621
+849  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.Server@47f37ef1
+850  DEBUG [2019-05-09 21:51:19]  starting qtp627185331{STOPPED,8<=0<=200,i=0,q=0}
+852  DEBUG [2019-05-09 21:51:19]  STARTED @7518ms qtp627185331{STARTED,8<=8<=200,i=0,q=0}
+852  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.session.HashSessionIdManager@3498ed
+871  DEBUG [2019-05-09 21:51:19]  STARTED @7538ms org.eclipse.jetty.server.session.HashSessionIdManager@3498ed
+872  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}]
+872  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}]
+873  DEBUG [2019-05-09 21:51:19]  starting o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}
+880  DEBUG [2019-05-09 21:51:19]  HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@7fad8c79]
+905  DEBUG [2019-05-09 21:51:19]  starting o.e.j.s.ServletContextHandler@668bc3d5{/,null,STARTING}
+905  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+906  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+906  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.session.HashSessionManager@6366ebe0
+907  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.session.HashSessionManager@6366ebe0 added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e,MANAGED}
+907  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.session.HashSessionManager@6366ebe0 added {org.eclipse.jetty.server.session.HashSessionIdManager@3498ed,UNMANAGED}
+908  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e
+913  DEBUG [2019-05-09 21:51:19]  STARTED @7579ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e
+917  DEBUG [2019-05-09 21:51:19]  STARTED @7584ms org.eclipse.jetty.server.session.HashSessionManager@6366ebe0
+917  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.servlet.ServletHandler@3cda1055
+922  DEBUG [2019-05-09 21:51:19]  Chose path=/api/v1/servlet/ImageCode mapped to servlet=ImageCode from default=false
+923  DEBUG [2019-05-09 21:51:19]  Chose path=/* mapped to servlet=mvc from default=false
+923  DEBUG [2019-05-09 21:51:19]  Chose path=/druid/* mapped to servlet=druid from default=false
+924  DEBUG [2019-05-09 21:51:19]  Chose path=/static mapped to servlet=trade from default=false
+925  DEBUG [2019-05-09 21:51:19]  filterNameMap={com.trade.filter.ForceOfflineFilter-33723e30=com.trade.filter.ForceOfflineFilter-33723e30, org.springframework.web.filter.DelegatingFilterProxy-43bd930a=org.springframework.web.filter.DelegatingFilterProxy-43bd930a, com.alibaba.druid.support.http.WebStatFilter-8646db9=com.alibaba.druid.support.http.WebStatFilter-8646db9}
+925  DEBUG [2019-05-09 21:51:19]  pathFilters=[[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9, [/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a, [/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30]
+925  DEBUG [2019-05-09 21:51:19]  servletFilterMap={}
+927  DEBUG [2019-05-09 21:51:19]  servletPathMap={/api/v1/servlet/ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, /*=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true, /druid/*=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, /static=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false}
+928  DEBUG [2019-05-09 21:51:19]  servletNameMap={trade=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, druid=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, mvc=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true}
+928  DEBUG [2019-05-09 21:51:19]  Adding Default404Servlet to org.eclipse.jetty.servlet.ServletHandler@3cda1055
+928  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false,AUTO}
+929  DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/]=>org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a,POJO}
+929  DEBUG [2019-05-09 21:51:19]  Chose path=/api/v1/servlet/ImageCode mapped to servlet=ImageCode from default=false
+929  DEBUG [2019-05-09 21:51:19]  Chose path=/* mapped to servlet=mvc from default=false
+929  DEBUG [2019-05-09 21:51:19]  Chose path=/druid/* mapped to servlet=druid from default=false
+929  DEBUG [2019-05-09 21:51:19]  Chose path=/static mapped to servlet=trade from default=false
+930  DEBUG [2019-05-09 21:51:19]  Chose path=/ mapped to servlet=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a from default=false
+930  DEBUG [2019-05-09 21:51:19]  filterNameMap={com.trade.filter.ForceOfflineFilter-33723e30=com.trade.filter.ForceOfflineFilter-33723e30, org.springframework.web.filter.DelegatingFilterProxy-43bd930a=org.springframework.web.filter.DelegatingFilterProxy-43bd930a, com.alibaba.druid.support.http.WebStatFilter-8646db9=com.alibaba.druid.support.http.WebStatFilter-8646db9}
+931  DEBUG [2019-05-09 21:51:19]  pathFilters=[[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9, [/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a, [/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30]
+931  DEBUG [2019-05-09 21:51:19]  servletFilterMap={}
+931  DEBUG [2019-05-09 21:51:19]  servletPathMap={/api/v1/servlet/ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, /*=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true, /druid/*=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, /static=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, /=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false}
+932  DEBUG [2019-05-09 21:51:19]  servletNameMap={trade=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, druid=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, mvc=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true}
+934  DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.servlet.ServletHandler@3cda1055
+935  DEBUG [2019-05-09 21:51:19]  STARTED @7601ms org.eclipse.jetty.servlet.ServletHandler@3cda1055
+935  DEBUG [2019-05-09 21:51:19]  STARTED @7601ms org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+936  DEBUG [2019-05-09 21:51:19]  contextInitialized: javax.servlet.ServletContextEvent[source=ServletContext@o.e.j.s.ServletContextHandler@668bc3d5{/,null,STARTING}]->org.springframework.web.context.ContextLoaderListener@442675e1
+936  INFO  [2019-05-09 21:51:19]  Initializing Spring root WebApplicationContext
+937  INFO  [2019-05-09 21:51:19]  Root WebApplicationContext: initialization started
+944  DEBUG [2019-05-09 21:51:19]  Replacing [servletContextInitParams] PropertySource with [servletContextInitParams]
+954  INFO  [2019-05-09 21:51:19]  Refreshing Root WebApplicationContext: startup date [Thu May 09 21:51:19 CST 2019]; root of context hierarchy
+1082 DEBUG [2019-05-09 21:51:19]  Adding [systemProperties] PropertySource with lowest search precedence
+1083 DEBUG [2019-05-09 21:51:19]  Adding [systemEnvironment] PropertySource with lowest search precedence
+1083 DEBUG [2019-05-09 21:51:19]  Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+1150 INFO  [2019-05-09 21:51:19]  Loading XML bean definitions from class path resource [applicationContext.xml]
+1154 ERROR [2019-05-09 21:51:19]  Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+1162 WARN  [2019-05-09 21:51:19]  FAILED o.e.j.s.ServletContextHandler@668bc3d5{/,null,UNAVAILABLE}: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+1165 WARN  [2019-05-09 21:51:19]  FAILED org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,UNAVAILABLE}]: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+1168 DEBUG [2019-05-09 21:51:19]  starting ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+1188 DEBUG [2019-05-09 21:51:19]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8888],POJO}
+1190 DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639
+1191 DEBUG [2019-05-09 21:51:19]  STARTED @7857ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639
+1193 DEBUG [2019-05-09 21:51:19]  starting HttpConnectionFactory@340f438e[HTTP/1.1]
+1194 DEBUG [2019-05-09 21:51:19]  STARTED @7860ms HttpConnectionFactory@340f438e[HTTP/1.1]
+1194 DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa
+1207 DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa added {org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=-1 selected=-1,AUTO}
+1208 DEBUG [2019-05-09 21:51:19]  org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa added {org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=-1 selected=-1,AUTO}
+1210 DEBUG [2019-05-09 21:51:19]  starting org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=-1 selected=-1
+2687 DEBUG [2019-05-09 21:51:20]  queue org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2688 DEBUG [2019-05-09 21:51:20]  run org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2688 DEBUG [2019-05-09 21:51:20]  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@68ae1b56 execute
+2688 DEBUG [2019-05-09 21:51:20]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@68ae1b56 produce enter
+2689 DEBUG [2019-05-09 21:51:20]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@68ae1b56 producing
+2689 DEBUG [2019-05-09 21:51:20]  Selector loop waiting on select
+2690 DEBUG [2019-05-09 21:51:20]  STARTED @9355ms org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2690 DEBUG [2019-05-09 21:51:20]  starting org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=-1 selected=-1
+2693 DEBUG [2019-05-09 21:51:20]  queue org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0
+2694 DEBUG [2019-05-09 21:51:20]  run org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0
+2695 DEBUG [2019-05-09 21:51:20]  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3a17f36 execute
+2695 DEBUG [2019-05-09 21:51:20]  STARTED @9360ms org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0
+2696 DEBUG [2019-05-09 21:51:20]  STARTED @9362ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa
+2696 DEBUG [2019-05-09 21:51:20]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3a17f36 produce enter
+2697 DEBUG [2019-05-09 21:51:20]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3a17f36 producing
+2697 DEBUG [2019-05-09 21:51:20]  Selector loop waiting on select
+2700 DEBUG [2019-05-09 21:51:20]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888} added {acceptor-0@3745e5c6,POJO}
+2700 DEBUG [2019-05-09 21:51:20]  queue acceptor-0@3745e5c6
+2700 DEBUG [2019-05-09 21:51:20]  run acceptor-0@3745e5c6
+2701 INFO  [2019-05-09 21:51:20]  Started ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+2701 DEBUG [2019-05-09 21:51:20]  STARTED @9368ms ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+2701 WARN  [2019-05-09 21:51:20]  FAILED org.eclipse.jetty.server.Server@47f37ef1: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+30919 DEBUG [2019-05-09 21:51:49]  Scavenging sessions at 1557409909139
+0    DEBUG [2019-05-09 21:51:59]  Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
+13   INFO  [2019-05-09 21:51:59]  Logging initialized @1839ms
+50   DEBUG [2019-05-09 21:51:59]  Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@71f2a7d5
+70   DEBUG [2019-05-09 21:51:59]  o.e.j.s.ServletContextHandler@6ea6d14e{/,null,null} added {org.eclipse.jetty.servlet.ServletHandler@6ad5c04e,MANAGED}
+87   DEBUG [2019-05-09 21:51:59]  org.eclipse.jetty.server.Server@47f37ef1 added {qtp627185331{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+147  DEBUG [2019-05-09 21:51:59]  HttpConnectionFactory@340f438e[HTTP/1.1] added {HttpConfiguration@30c7da1e{32768/8192,8192/8192,https://:0,[]},POJO}
+159  DEBUG [2019-05-09 21:51:59]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@47f37ef1,UNMANAGED}
+161  DEBUG [2019-05-09 21:51:59]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {qtp627185331{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+163  DEBUG [2019-05-09 21:51:59]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639,AUTO}
+164  DEBUG [2019-05-09 21:51:59]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@67b64c45,POJO}
+167  DEBUG [2019-05-09 21:51:59]  ServerConnector@3796751b{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@340f438e[HTTP/1.1],AUTO}
+169  DEBUG [2019-05-09 21:51:59]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@340f438e[HTTP/1.1]
+177  DEBUG [2019-05-09 21:51:59]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa,MANAGED}
+178  DEBUG [2019-05-09 21:51:59]  org.eclipse.jetty.server.Server@47f37ef1 added {ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888},AUTO}
+184  DEBUG [2019-05-09 21:51:59]  org.eclipse.jetty.server.Server@47f37ef1 added {org.eclipse.jetty.server.session.HashSessionIdManager@3498ed,AUTO}
+195  DEBUG [2019-05-09 21:51:59]  Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@380fb434
+196  DEBUG [2019-05-09 21:51:59]  o.e.j.s.ServletContextHandler@668bc3d5{/,null,null} added {org.eclipse.jetty.servlet.ServletHandler@3cda1055,MANAGED}
+765  DEBUG [2019-05-09 21:52:00]  Adding [servletConfigInitParams] PropertySource with lowest search precedence
+766  DEBUG [2019-05-09 21:52:00]  Adding [servletContextInitParams] PropertySource with lowest search precedence
+782  DEBUG [2019-05-09 21:52:00]  InitialContextFactory.getInitialContext()
+798  DEBUG [2019-05-09 21:52:00]  supportDeepBinding=false
+799  DEBUG [2019-05-09 21:52:00]  Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@15d0c81b
+804  DEBUG [2019-05-09 21:52:00]  Adding [jndiProperties] PropertySource with lowest search precedence
+805  DEBUG [2019-05-09 21:52:00]  Adding [systemProperties] PropertySource with lowest search precedence
+808  DEBUG [2019-05-09 21:52:00]  Adding [systemEnvironment] PropertySource with lowest search precedence
+815  DEBUG [2019-05-09 21:52:00]  Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+888  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false,AUTO}
+889  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/static]=>trade,POJO}
+899  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false,AUTO}
+899  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/api/v1/servlet/ImageCode]=>ImageCode,POJO}
+911  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false,AUTO}
+911  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/druid/*]=>druid,POJO}
+957  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true,AUTO}
+966  DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]=>mvc,POJO}
+1149 DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {com.alibaba.druid.support.http.WebStatFilter-8646db9,AUTO}
+1171 DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9,POJO}
+1212 DEBUG [2019-05-09 21:52:00]  Adding [servletConfigInitParams] PropertySource with lowest search precedence
+1213 DEBUG [2019-05-09 21:52:00]  Adding [servletContextInitParams] PropertySource with lowest search precedence
+1213 DEBUG [2019-05-09 21:52:00]  InitialContextFactory.getInitialContext()
+1214 DEBUG [2019-05-09 21:52:00]  Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@569cfc36
+1215 DEBUG [2019-05-09 21:52:00]  Adding [jndiProperties] PropertySource with lowest search precedence
+1215 DEBUG [2019-05-09 21:52:00]  Adding [systemProperties] PropertySource with lowest search precedence
+1216 DEBUG [2019-05-09 21:52:00]  Adding [systemEnvironment] PropertySource with lowest search precedence
+1216 DEBUG [2019-05-09 21:52:00]  Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+1217 DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {org.springframework.web.filter.DelegatingFilterProxy-43bd930a,AUTO}
+1218 DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a,POJO}
+1221 DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {com.trade.filter.ForceOfflineFilter-33723e30,AUTO}
+1222 DEBUG [2019-05-09 21:52:00]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30,POJO}
+1444 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.session.SessionHandler@3d0f8e03 added {org.eclipse.jetty.server.session.HashSessionManager@6366ebe0,AUTO}
+1445 DEBUG [2019-05-09 21:52:01]  o.e.j.s.ServletContextHandler@668bc3d5{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@3d0f8e03,MANAGED}
+1445 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.session.SessionHandler@3d0f8e03 added {org.eclipse.jetty.servlet.ServletHandler@3cda1055,MANAGED}
+1446 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}] added {o.e.j.s.ServletContextHandler@668bc3d5{/,null,null},AUTO}
+1447 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.Server@47f37ef1 added {org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}],MANAGED}
+1447 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.Server@47f37ef1
+1450 INFO  [2019-05-09 21:52:01]  jetty-9.3.10.v20160621
+1482 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.Server@47f37ef1
+1483 DEBUG [2019-05-09 21:52:01]  starting qtp627185331{STOPPED,8<=0<=200,i=0,q=0}
+1485 DEBUG [2019-05-09 21:52:01]  STARTED @3312ms qtp627185331{STARTED,8<=8<=200,i=1,q=0}
+1485 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.session.HashSessionIdManager@3498ed
+1500 DEBUG [2019-05-09 21:52:01]  STARTED @3327ms org.eclipse.jetty.server.session.HashSessionIdManager@3498ed
+1501 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}]
+1502 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}]
+1502 DEBUG [2019-05-09 21:52:01]  starting o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}
+1512 DEBUG [2019-05-09 21:52:01]  HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@7fad8c79]
+1526 DEBUG [2019-05-09 21:52:01]  starting o.e.j.s.ServletContextHandler@668bc3d5{/,null,STARTING}
+1527 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+1527 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+1527 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.session.HashSessionManager@6366ebe0
+1528 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.session.HashSessionManager@6366ebe0 added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e,MANAGED}
+1528 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.session.HashSessionManager@6366ebe0 added {org.eclipse.jetty.server.session.HashSessionIdManager@3498ed,UNMANAGED}
+1528 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e
+1532 DEBUG [2019-05-09 21:52:01]  STARTED @3359ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e
+1536 DEBUG [2019-05-09 21:52:01]  STARTED @3363ms org.eclipse.jetty.server.session.HashSessionManager@6366ebe0
+1536 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.servlet.ServletHandler@3cda1055
+1539 DEBUG [2019-05-09 21:52:01]  Chose path=/api/v1/servlet/ImageCode mapped to servlet=ImageCode from default=false
+1541 DEBUG [2019-05-09 21:52:01]  Chose path=/* mapped to servlet=mvc from default=false
+1541 DEBUG [2019-05-09 21:52:01]  Chose path=/druid/* mapped to servlet=druid from default=false
+1541 DEBUG [2019-05-09 21:52:01]  Chose path=/static mapped to servlet=trade from default=false
+1541 DEBUG [2019-05-09 21:52:01]  filterNameMap={com.trade.filter.ForceOfflineFilter-33723e30=com.trade.filter.ForceOfflineFilter-33723e30, org.springframework.web.filter.DelegatingFilterProxy-43bd930a=org.springframework.web.filter.DelegatingFilterProxy-43bd930a, com.alibaba.druid.support.http.WebStatFilter-8646db9=com.alibaba.druid.support.http.WebStatFilter-8646db9}
+1542 DEBUG [2019-05-09 21:52:01]  pathFilters=[[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9, [/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a, [/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30]
+1542 DEBUG [2019-05-09 21:52:01]  servletFilterMap={}
+1544 DEBUG [2019-05-09 21:52:01]  servletPathMap={/api/v1/servlet/ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, /*=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true, /druid/*=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, /static=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false}
+1545 DEBUG [2019-05-09 21:52:01]  servletNameMap={trade=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, druid=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, mvc=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true}
+1545 DEBUG [2019-05-09 21:52:01]  Adding Default404Servlet to org.eclipse.jetty.servlet.ServletHandler@3cda1055
+1546 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false,AUTO}
+1547 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/]=>org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a,POJO}
+1547 DEBUG [2019-05-09 21:52:01]  Chose path=/api/v1/servlet/ImageCode mapped to servlet=ImageCode from default=false
+1547 DEBUG [2019-05-09 21:52:01]  Chose path=/* mapped to servlet=mvc from default=false
+1548 DEBUG [2019-05-09 21:52:01]  Chose path=/druid/* mapped to servlet=druid from default=false
+1548 DEBUG [2019-05-09 21:52:01]  Chose path=/static mapped to servlet=trade from default=false
+1548 DEBUG [2019-05-09 21:52:01]  Chose path=/ mapped to servlet=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a from default=false
+1548 DEBUG [2019-05-09 21:52:01]  filterNameMap={com.trade.filter.ForceOfflineFilter-33723e30=com.trade.filter.ForceOfflineFilter-33723e30, org.springframework.web.filter.DelegatingFilterProxy-43bd930a=org.springframework.web.filter.DelegatingFilterProxy-43bd930a, com.alibaba.druid.support.http.WebStatFilter-8646db9=com.alibaba.druid.support.http.WebStatFilter-8646db9}
+1549 DEBUG [2019-05-09 21:52:01]  pathFilters=[[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9, [/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a, [/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30]
+1550 DEBUG [2019-05-09 21:52:01]  servletFilterMap={}
+1551 DEBUG [2019-05-09 21:52:01]  servletPathMap={/api/v1/servlet/ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, /*=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true, /druid/*=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, /static=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, /=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false}
+1551 DEBUG [2019-05-09 21:52:01]  servletNameMap={trade=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, druid=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, mvc=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true}
+1552 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.servlet.ServletHandler@3cda1055
+1553 DEBUG [2019-05-09 21:52:01]  STARTED @3380ms org.eclipse.jetty.servlet.ServletHandler@3cda1055
+1553 DEBUG [2019-05-09 21:52:01]  STARTED @3380ms org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+1554 DEBUG [2019-05-09 21:52:01]  contextInitialized: javax.servlet.ServletContextEvent[source=ServletContext@o.e.j.s.ServletContextHandler@668bc3d5{/,null,STARTING}]->org.springframework.web.context.ContextLoaderListener@442675e1
+1555 INFO  [2019-05-09 21:52:01]  Initializing Spring root WebApplicationContext
+1555 INFO  [2019-05-09 21:52:01]  Root WebApplicationContext: initialization started
+1561 DEBUG [2019-05-09 21:52:01]  Replacing [servletContextInitParams] PropertySource with [servletContextInitParams]
+1569 INFO  [2019-05-09 21:52:01]  Refreshing Root WebApplicationContext: startup date [Thu May 09 21:52:01 CST 2019]; root of context hierarchy
+1673 DEBUG [2019-05-09 21:52:01]  Adding [systemProperties] PropertySource with lowest search precedence
+1673 DEBUG [2019-05-09 21:52:01]  Adding [systemEnvironment] PropertySource with lowest search precedence
+1673 DEBUG [2019-05-09 21:52:01]  Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+1709 INFO  [2019-05-09 21:52:01]  Loading XML bean definitions from class path resource [applicationContext.xml]
+1712 ERROR [2019-05-09 21:52:01]  Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+1721 WARN  [2019-05-09 21:52:01]  FAILED o.e.j.s.ServletContextHandler@668bc3d5{/,null,UNAVAILABLE}: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+1722 WARN  [2019-05-09 21:52:01]  FAILED org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,UNAVAILABLE}]: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+1737 DEBUG [2019-05-09 21:52:01]  starting ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+1751 DEBUG [2019-05-09 21:52:01]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8888],POJO}
+1751 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639
+1751 DEBUG [2019-05-09 21:52:01]  STARTED @3578ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639
+1752 DEBUG [2019-05-09 21:52:01]  starting HttpConnectionFactory@340f438e[HTTP/1.1]
+1752 DEBUG [2019-05-09 21:52:01]  STARTED @3579ms HttpConnectionFactory@340f438e[HTTP/1.1]
+1753 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa
+1763 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa added {org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=-1 selected=-1,AUTO}
+1764 DEBUG [2019-05-09 21:52:01]  org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa added {org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=-1 selected=-1,AUTO}
+1765 DEBUG [2019-05-09 21:52:01]  starting org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=-1 selected=-1
+2562 DEBUG [2019-05-09 21:52:02]  queue org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2563 DEBUG [2019-05-09 21:52:02]  run org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2563 DEBUG [2019-05-09 21:52:02]  STARTED @4390ms org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2564 DEBUG [2019-05-09 21:52:02]  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3a34d031 execute
+2564 DEBUG [2019-05-09 21:52:02]  starting org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=-1 selected=-1
+2564 DEBUG [2019-05-09 21:52:02]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3a34d031 produce enter
+2564 DEBUG [2019-05-09 21:52:02]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3a34d031 producing
+2564 DEBUG [2019-05-09 21:52:02]  Selector loop waiting on select
+2566 DEBUG [2019-05-09 21:52:02]  queue org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0
+2566 DEBUG [2019-05-09 21:52:02]  run org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0
+2566 DEBUG [2019-05-09 21:52:02]  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@684a37a2 execute
+2566 DEBUG [2019-05-09 21:52:02]  STARTED @4393ms org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0
+2567 DEBUG [2019-05-09 21:52:02]  STARTED @4394ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa
+2566 DEBUG [2019-05-09 21:52:02]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@684a37a2 produce enter
+2568 DEBUG [2019-05-09 21:52:02]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@684a37a2 producing
+2568 DEBUG [2019-05-09 21:52:02]  Selector loop waiting on select
+2576 DEBUG [2019-05-09 21:52:02]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888} added {acceptor-0@3745e5c6,POJO}
+2576 DEBUG [2019-05-09 21:52:02]  queue acceptor-0@3745e5c6
+2577 DEBUG [2019-05-09 21:52:02]  run acceptor-0@3745e5c6
+2577 INFO  [2019-05-09 21:52:02]  Started ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+2577 DEBUG [2019-05-09 21:52:02]  STARTED @4405ms ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+2578 WARN  [2019-05-09 21:52:02]  FAILED org.eclipse.jetty.server.Server@47f37ef1: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+31536 DEBUG [2019-05-09 21:52:31]  Scavenging sessions at 1557409951234
+0    DEBUG [2019-05-09 21:56:54]  Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
+17   INFO  [2019-05-09 21:56:54]  Logging initialized @1322ms
+54   DEBUG [2019-05-09 21:56:54]  Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@71f2a7d5
+71   DEBUG [2019-05-09 21:56:54]  o.e.j.s.ServletContextHandler@6ea6d14e{/,null,null} added {org.eclipse.jetty.servlet.ServletHandler@6ad5c04e,MANAGED}
+86   DEBUG [2019-05-09 21:56:54]  org.eclipse.jetty.server.Server@47f37ef1 added {qtp627185331{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+135  DEBUG [2019-05-09 21:56:54]  HttpConnectionFactory@340f438e[HTTP/1.1] added {HttpConfiguration@30c7da1e{32768/8192,8192/8192,https://:0,[]},POJO}
+148  DEBUG [2019-05-09 21:56:54]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@47f37ef1,UNMANAGED}
+148  DEBUG [2019-05-09 21:56:54]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {qtp627185331{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+149  DEBUG [2019-05-09 21:56:54]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639,AUTO}
+150  DEBUG [2019-05-09 21:56:54]  ServerConnector@3796751b{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@67b64c45,POJO}
+151  DEBUG [2019-05-09 21:56:54]  ServerConnector@3796751b{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@340f438e[HTTP/1.1],AUTO}
+152  DEBUG [2019-05-09 21:56:54]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@340f438e[HTTP/1.1]
+159  DEBUG [2019-05-09 21:56:54]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa,MANAGED}
+160  DEBUG [2019-05-09 21:56:54]  org.eclipse.jetty.server.Server@47f37ef1 added {ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888},AUTO}
+166  DEBUG [2019-05-09 21:56:54]  org.eclipse.jetty.server.Server@47f37ef1 added {org.eclipse.jetty.server.session.HashSessionIdManager@3498ed,AUTO}
+174  DEBUG [2019-05-09 21:56:54]  Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@380fb434
+174  DEBUG [2019-05-09 21:56:54]  o.e.j.s.ServletContextHandler@668bc3d5{/,null,null} added {org.eclipse.jetty.servlet.ServletHandler@3cda1055,MANAGED}
+465  DEBUG [2019-05-09 21:56:55]  Adding [servletConfigInitParams] PropertySource with lowest search precedence
+466  DEBUG [2019-05-09 21:56:55]  Adding [servletContextInitParams] PropertySource with lowest search precedence
+483  DEBUG [2019-05-09 21:56:55]  InitialContextFactory.getInitialContext()
+495  DEBUG [2019-05-09 21:56:55]  supportDeepBinding=false
+495  DEBUG [2019-05-09 21:56:55]  Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@15d0c81b
+499  DEBUG [2019-05-09 21:56:55]  Adding [jndiProperties] PropertySource with lowest search precedence
+500  DEBUG [2019-05-09 21:56:55]  Adding [systemProperties] PropertySource with lowest search precedence
+502  DEBUG [2019-05-09 21:56:55]  Adding [systemEnvironment] PropertySource with lowest search precedence
+504  DEBUG [2019-05-09 21:56:55]  Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+531  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false,AUTO}
+532  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/static]=>trade,POJO}
+538  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false,AUTO}
+539  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/api/v1/servlet/ImageCode]=>ImageCode,POJO}
+548  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false,AUTO}
+548  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/druid/*]=>druid,POJO}
+581  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true,AUTO}
+582  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]=>mvc,POJO}
+596  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {com.alibaba.druid.support.http.WebStatFilter-8646db9,AUTO}
+602  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9,POJO}
+606  DEBUG [2019-05-09 21:56:55]  Adding [servletConfigInitParams] PropertySource with lowest search precedence
+606  DEBUG [2019-05-09 21:56:55]  Adding [servletContextInitParams] PropertySource with lowest search precedence
+607  DEBUG [2019-05-09 21:56:55]  InitialContextFactory.getInitialContext()
+607  DEBUG [2019-05-09 21:56:55]  Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@569cfc36
+607  DEBUG [2019-05-09 21:56:55]  Adding [jndiProperties] PropertySource with lowest search precedence
+608  DEBUG [2019-05-09 21:56:55]  Adding [systemProperties] PropertySource with lowest search precedence
+608  DEBUG [2019-05-09 21:56:55]  Adding [systemEnvironment] PropertySource with lowest search precedence
+609  DEBUG [2019-05-09 21:56:55]  Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+609  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {org.springframework.web.filter.DelegatingFilterProxy-43bd930a,AUTO}
+609  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a,POJO}
+612  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {com.trade.filter.ForceOfflineFilter-33723e30,AUTO}
+612  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30,POJO}
+731  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.session.SessionHandler@3d0f8e03 added {org.eclipse.jetty.server.session.HashSessionManager@6366ebe0,AUTO}
+732  DEBUG [2019-05-09 21:56:55]  o.e.j.s.ServletContextHandler@668bc3d5{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@3d0f8e03,MANAGED}
+733  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.session.SessionHandler@3d0f8e03 added {org.eclipse.jetty.servlet.ServletHandler@3cda1055,MANAGED}
+734  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}] added {o.e.j.s.ServletContextHandler@668bc3d5{/,null,null},AUTO}
+734  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.Server@47f37ef1 added {org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}],MANAGED}
+735  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.Server@47f37ef1
+738  INFO  [2019-05-09 21:56:55]  jetty-9.3.10.v20160621
+768  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.Server@47f37ef1
+769  DEBUG [2019-05-09 21:56:55]  starting qtp627185331{STOPPED,8<=0<=200,i=0,q=0}
+771  DEBUG [2019-05-09 21:56:55]  STARTED @2075ms qtp627185331{STARTED,8<=8<=200,i=0,q=0}
+772  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.session.HashSessionIdManager@3498ed
+787  DEBUG [2019-05-09 21:56:55]  STARTED @2091ms org.eclipse.jetty.server.session.HashSessionIdManager@3498ed
+787  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}]
+787  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}]
+787  DEBUG [2019-05-09 21:56:55]  starting o.e.j.s.ServletContextHandler@668bc3d5{/,null,null}
+795  DEBUG [2019-05-09 21:56:55]  HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@7fad8c79]
+810  DEBUG [2019-05-09 21:56:55]  starting o.e.j.s.ServletContextHandler@668bc3d5{/,null,STARTING}
+811  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+811  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+811  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.session.HashSessionManager@6366ebe0
+811  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.session.HashSessionManager@6366ebe0 added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e,MANAGED}
+811  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.session.HashSessionManager@6366ebe0 added {org.eclipse.jetty.server.session.HashSessionIdManager@3498ed,UNMANAGED}
+812  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e
+815  DEBUG [2019-05-09 21:56:55]  STARTED @2119ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@11e21d0e
+819  DEBUG [2019-05-09 21:56:55]  STARTED @2123ms org.eclipse.jetty.server.session.HashSessionManager@6366ebe0
+819  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.servlet.ServletHandler@3cda1055
+822  DEBUG [2019-05-09 21:56:55]  Chose path=/api/v1/servlet/ImageCode mapped to servlet=ImageCode from default=false
+823  DEBUG [2019-05-09 21:56:55]  Chose path=/* mapped to servlet=mvc from default=false
+823  DEBUG [2019-05-09 21:56:55]  Chose path=/druid/* mapped to servlet=druid from default=false
+823  DEBUG [2019-05-09 21:56:55]  Chose path=/static mapped to servlet=trade from default=false
+824  DEBUG [2019-05-09 21:56:55]  filterNameMap={com.trade.filter.ForceOfflineFilter-33723e30=com.trade.filter.ForceOfflineFilter-33723e30, org.springframework.web.filter.DelegatingFilterProxy-43bd930a=org.springframework.web.filter.DelegatingFilterProxy-43bd930a, com.alibaba.druid.support.http.WebStatFilter-8646db9=com.alibaba.druid.support.http.WebStatFilter-8646db9}
+824  DEBUG [2019-05-09 21:56:55]  pathFilters=[[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9, [/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a, [/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30]
+824  DEBUG [2019-05-09 21:56:55]  servletFilterMap={}
+825  DEBUG [2019-05-09 21:56:55]  servletPathMap={/api/v1/servlet/ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, /*=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true, /druid/*=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, /static=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false}
+825  DEBUG [2019-05-09 21:56:55]  servletNameMap={trade=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, druid=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, mvc=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true}
+826  DEBUG [2019-05-09 21:56:55]  Adding Default404Servlet to org.eclipse.jetty.servlet.ServletHandler@3cda1055
+826  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false,AUTO}
+827  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.servlet.ServletHandler@3cda1055 added {[/]=>org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a,POJO}
+827  DEBUG [2019-05-09 21:56:55]  Chose path=/api/v1/servlet/ImageCode mapped to servlet=ImageCode from default=false
+827  DEBUG [2019-05-09 21:56:55]  Chose path=/* mapped to servlet=mvc from default=false
+828  DEBUG [2019-05-09 21:56:55]  Chose path=/druid/* mapped to servlet=druid from default=false
+828  DEBUG [2019-05-09 21:56:55]  Chose path=/static mapped to servlet=trade from default=false
+828  DEBUG [2019-05-09 21:56:55]  Chose path=/ mapped to servlet=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a from default=false
+828  DEBUG [2019-05-09 21:56:55]  filterNameMap={com.trade.filter.ForceOfflineFilter-33723e30=com.trade.filter.ForceOfflineFilter-33723e30, org.springframework.web.filter.DelegatingFilterProxy-43bd930a=org.springframework.web.filter.DelegatingFilterProxy-43bd930a, com.alibaba.druid.support.http.WebStatFilter-8646db9=com.alibaba.druid.support.http.WebStatFilter-8646db9}
+828  DEBUG [2019-05-09 21:56:55]  pathFilters=[[/*]/[]==0=>com.alibaba.druid.support.http.WebStatFilter-8646db9, [/*]/[]==0=>org.springframework.web.filter.DelegatingFilterProxy-43bd930a, [/api/*]/[]==0=>com.trade.filter.ForceOfflineFilter-33723e30]
+828  DEBUG [2019-05-09 21:56:55]  servletFilterMap={}
+829  DEBUG [2019-05-09 21:56:55]  servletPathMap={/api/v1/servlet/ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, /*=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true, /druid/*=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, /static=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, /=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false}
+830  DEBUG [2019-05-09 21:56:55]  servletNameMap={trade=trade@697f164==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, druid=druid@5b6c502==com.alibaba.druid.support.http.StatViewServlet,-1,false, org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a=org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-314c508a@8d5dfba5==org.eclipse.jetty.servlet.ServletHandler$Default404Servlet,-1,false, ImageCode=ImageCode@4312c5c8==com.trade.servlet.ImageCode,-1,false, mvc=mvc@1a7da==org.springframework.web.servlet.DispatcherServlet,-1,true}
+831  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.servlet.ServletHandler@3cda1055
+831  DEBUG [2019-05-09 21:56:55]  STARTED @2135ms org.eclipse.jetty.servlet.ServletHandler@3cda1055
+832  DEBUG [2019-05-09 21:56:55]  STARTED @2136ms org.eclipse.jetty.server.session.SessionHandler@3d0f8e03
+833  DEBUG [2019-05-09 21:56:55]  contextInitialized: javax.servlet.ServletContextEvent[source=ServletContext@o.e.j.s.ServletContextHandler@668bc3d5{/,null,STARTING}]->org.springframework.web.context.ContextLoaderListener@442675e1
+833  INFO  [2019-05-09 21:56:55]  Initializing Spring root WebApplicationContext
+833  INFO  [2019-05-09 21:56:55]  Root WebApplicationContext: initialization started
+837  DEBUG [2019-05-09 21:56:55]  Replacing [servletContextInitParams] PropertySource with [servletContextInitParams]
+843  INFO  [2019-05-09 21:56:55]  Refreshing Root WebApplicationContext: startup date [Thu May 09 21:56:55 CST 2019]; root of context hierarchy
+898  DEBUG [2019-05-09 21:56:55]  Adding [systemProperties] PropertySource with lowest search precedence
+898  DEBUG [2019-05-09 21:56:55]  Adding [systemEnvironment] PropertySource with lowest search precedence
+899  DEBUG [2019-05-09 21:56:55]  Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+915  INFO  [2019-05-09 21:56:55]  Loading XML bean definitions from class path resource [applicationContext.xml]
+917  ERROR [2019-05-09 21:56:55]  Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+925  WARN  [2019-05-09 21:56:55]  FAILED o.e.j.s.ServletContextHandler@668bc3d5{/,null,UNAVAILABLE}: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+926  WARN  [2019-05-09 21:56:55]  FAILED org.eclipse.jetty.server.handler.HandlerCollection@44f75083[o.e.j.s.ServletContextHandler@668bc3d5{/,null,UNAVAILABLE}]: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [applicationContext.xml]; nested exception is java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:510)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:444)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:326)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:843)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:533)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:816)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:411)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:106)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:378)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at main.NewFrontendAppServer.main(NewFrontendAppServer.java:76)
+Caused by: java.io.FileNotFoundException: class path resource [applicationContext.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 30 more
+928  DEBUG [2019-05-09 21:56:55]  starting ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+950  DEBUG [2019-05-09 21:56:55]  ServerConnector@3796751b{HTTP/1.1,[http/1.1]}{0.0.0.0:8888} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8888],POJO}
+952  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639
+952  DEBUG [2019-05-09 21:56:55]  STARTED @2257ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7e0ea639
+953  DEBUG [2019-05-09 21:56:55]  starting HttpConnectionFactory@340f438e[HTTP/1.1]
+954  DEBUG [2019-05-09 21:56:55]  STARTED @2258ms HttpConnectionFactory@340f438e[HTTP/1.1]
+954  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa
+963  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa added {org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=-1 selected=-1,AUTO}
+964  DEBUG [2019-05-09 21:56:55]  org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6bf256fa added {org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=-1 selected=-1,AUTO}
+969  DEBUG [2019-05-09 21:56:55]  starting org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=-1 selected=-1
+2783 DEBUG [2019-05-09 21:56:57]  queue org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2784 DEBUG [2019-05-09 21:56:57]  run org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2786 DEBUG [2019-05-09 21:56:57]  EPC Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@21014851 execute
+2787 DEBUG [2019-05-09 21:56:57]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@21014851 produce enter
+2788 DEBUG [2019-05-09 21:56:57]  EPC Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@21014851 producing
+2789 DEBUG [2019-05-09 21:56:57]  Selector loop waiting on select
+2791 DEBUG [2019-05-09 21:56:57]  STARTED @4095ms org.eclipse.jetty.io.ManagedSelector@f2f2cc1 id=0 keys=0 selected=0
+2791 DEBUG [2019-05-09 21:56:57]  starting org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=-1 selected=-1
+2795 DEBUG [2019-05-09 21:56:57]  queue org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0
+2795 DEBUG [2019-05-09 21:56:57]  run org.eclipse.jetty.io.ManagedSelector@3a079870 id=1 keys=0 selected=0

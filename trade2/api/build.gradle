@@ -1,0 +1,43 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "main.ApiAppServer"
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile(project(":core")){
+        transitive = true
+        exclude group: "net.gplatform"
+        exclude group: "org.quartz-scheduler"
+        exclude group: "javax.mail"
+        exclude group: "cn.jpush.api"
+        exclude group: "com.google.guava"
+        exclude group: "org.apache.ws.commons.axiom"
+        exclude group: "com.google.code.gson"
+        exclude group: "net.sf.ezmorph"
+    }
+    testCompile "junit:junit:4.11"
+    testCompile "org.springframework:spring-test:$springVersion"
+    compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+    compile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
+}
+
+def env = System.getProperty("env") ?: "dev"
+
+def res = env == "dev" ? "resources" : "profile/$env";
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/resources", "../config/src/main/resources", "../config/src/main/$res"]
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

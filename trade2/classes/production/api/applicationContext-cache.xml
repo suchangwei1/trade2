@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cache="http://www.springframework.org/schema/cache" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+             http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="ehcache"/>
+    </bean>
+
+    <bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache.xml"/>
+    </bean>
+
+    <bean class="com.trade.api.cache.TradeApiCacheService"/>
+
+    <cache:annotation-driven cache-manager="cacheManager"/>
+
+    <!--方法缓存定义配置-->
+
+    <cache:advice id="cacheAdvice" cache-manager="cacheManager">
+        <cache:caching cache="common">
+            <cache:cacheable method="findCacheByKey" key="'trade:cache:findCacheByKey'+#p0"/>
+            <cache:cacheable method="getTradeApi" key="'trade:cache:getTradeApi'+#p0"/>
+        </cache:caching>
+    </cache:advice>
+
+    <aop:config>
+        <aop:advisor advice-ref="cacheAdvice" pointcut="execution(* com.trade.service.front.TradeApiService.*(..))"/>
+        <aop:advisor advice-ref="cacheAdvice" pointcut="execution(* com.trade.api.cache.TradeApiCacheService.*(..))"/>
+    </aop:config>
+
+</beans>

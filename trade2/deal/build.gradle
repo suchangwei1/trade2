@@ -1,0 +1,60 @@
+group 'com.trade'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "main.AppServer"
+
+sourceCompatibility = 1.8
+
+ext {
+    springVersion = "4.2.6.RELEASE"
+    mysqlVersion = "5.1.38"
+    servletVersion = "3.1.0"
+    jedisVersion = "2.8.1"
+    fastjsonVersion = "1.2.8"
+    druidVersion = "1.0.19"
+    amqpVersion = "3.6.1"
+    jettyVersion = "9.3.10.v20160621"
+}
+
+repositories {
+//    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile "junit:junit:4.11"
+    compile 'org.ehcache:ehcache:3.0.1'
+    compile project(":core")
+    compile "org.slf4j:slf4j-log4j12:1.7.21"
+    compile "redis.clients:jedis:$jedisVersion"
+    compile "mysql:mysql-connector-java:$mysqlVersion"
+    compile "com.alibaba:fastjson:$fastjsonVersion"
+    compile "com.rabbitmq:amqp-client:$amqpVersion"
+    compile "com.alibaba:fastjson:$fastjsonVersion"
+    compile "com.alibaba:druid:$druidVersion"
+    compile "org.springframework:spring-context:$springVersion"
+//    compile "org.eclipse.jetty:jetty-quickstart:$jettyVersion"
+    compile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
+    testCompile "org.springframework:spring-test:$springVersion"
+
+}
+
+def env = System.getProperty("env") ?: "dev"
+def res = env == "dev" ? "resources" : "profile/$env";
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/resources", "src/main/$res"]
+        }
+    }
+}
+
+println "package $env version";
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
